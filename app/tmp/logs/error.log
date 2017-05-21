@@ -1,0 +1,26 @@
+2017-05-21 11:18:57 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+',
+  'enabled' => true,
+)
+Request URL: /login/
+Stack Trace:
+#0 D:\OpenServer\domains\test.net\lib\Cake\Model\Datasource\DboSource.php(269): Mysql->connect()
+#1 D:\OpenServer\domains\test.net\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\OpenServer\domains\test.net\lib\Cake\Model\Model.php(3640): ConnectionManager::getDataSource('default')
+#3 D:\OpenServer\domains\test.net\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#4 D:\OpenServer\domains\test.net\lib\Cake\Model\Model.php(3667): Model->setSource('users')
+#5 D:\OpenServer\domains\test.net\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#6 D:\OpenServer\domains\test.net\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\OpenServer\domains\test.net\lib\Cake\View\Helper\FormHelper.php(480): FormHelper->_introspectModel('User', 'fields')
+#8 D:\OpenServer\domains\test.net\app\View\Users\login.ctp(4): FormHelper->create('User')
+#9 D:\OpenServer\domains\test.net\lib\Cake\View\View.php(971): include('D:\\OpenServer\\d...')
+#10 D:\OpenServer\domains\test.net\lib\Cake\View\View.php(933): View->_evaluate('D:\\OpenServer\\d...', Array)
+#11 D:\OpenServer\domains\test.net\lib\Cake\View\View.php(473): View->_render('D:\\OpenServer\\d...')
+#12 D:\OpenServer\domains\test.net\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#13 D:\OpenServer\domains\test.net\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 D:\OpenServer\domains\test.net\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 D:\OpenServer\domains\test.net\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
